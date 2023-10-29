@@ -1,0 +1,69 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "rustdesk-server"
+name = "Rustdesk server"
+description.en = "Remote control alternative for self-hosting"
+description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
+
+version = "1.0~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "AGPL-3.0"
+website = "https://rustdesk.com/"
+admindoc = "https://yunohost.org/packaging_apps"
+code = "https://github.com/rustdesk/rustdesk-server"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = false
+
+ldap = false
+
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+        [resources.sources.main]
+        in_subdir = true
+        extract = false
+        amd64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-amd64.zip"
+        amd64.sha256 = "3cf2790c3e9ef70c0eb9ffae02cbe3a2efad71621efda376450e7be3209f2b1c"
+        arm64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-arm64v8.zip"
+        arm64.sha256 = "cdab02fb8731f05ab34340b91ba8cc8333ea8e4445bda1d53ee2d4a6dbb98c7c"
+        armhf.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-armv7.zip"
+        armhf.sha256 = "2e6df5751ca0188190c08f6b67125820e7f015545787fae34c1a661c963f0c4b"
+        autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+    main.default = 21115
+    main.exposed = "TCP"
+    hbbs.main = 21116
+    hbbs.exposed = "Both"
+    hbbr.main = 21117
+    hbbr.exposed = "TCP"

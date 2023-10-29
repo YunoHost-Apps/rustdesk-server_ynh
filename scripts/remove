@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#=================================================
+# GENERIC START
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# REMOVE SYSTEM CONFIGURATIONS
+#=================================================
+# REMOVE SYSTEMD SERVICE 
+#=================================================
+ynh_script_progression --message="Removing system configurations related to $app..." --weight=1
+
+# Remove the service from the list of services known by YunoHost (added from `yunohost service add`)
+if ynh_exec_warn_less yunohost service status $rustdesk-server >/dev/null
+then
+	ynh_script_progression --message="Removing $rustdesk-server service integration..." --weight=1
+	yunohost service remove $rustdesk-server
+fi
+if ynh_exec_warn_less yunohost service status $rustdesk-hbbs >/dev/null
+then
+	ynh_script_progression --message="Removing $rustdesk-hbbs service integration..." --weight=1
+	yunohost service remove $rustdesk-hbbs
+fi
+
+ynh_remove_systemd_config --service=rustdesk-server
+ynh_remove_systemd_config --service=rustdesk-hbbs 
+
+ynh_remove_nginx_config
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_script_progression --message="Removal of $app completed" --last
