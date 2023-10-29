@@ -14,7 +14,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "AGPL-3.0"
 website = "https://rustdesk.com/"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://rustdesk.com/docs/en/"
 code = "https://github.com/rustdesk/rustdesk-server"
 
 [integration]
