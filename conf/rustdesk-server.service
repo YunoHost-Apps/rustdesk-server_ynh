@@ -3,11 +3,11 @@ Description=Rustdesk Relay Server
 
 [Service]
 Type=simple
+User=__APP__
+Group=__APP__
 LimitNOFILE=1000000
 ExecStart=rustdesk-server/hbbr
 WorkingDirectory=rustdesk-server/
-User=__APP__
-Group=__APP__
 Restart=always
 StandardOutput=append:rustdesk-server/hbbr.log
 StandardError=append:rustdesk-server/hbbr.error
