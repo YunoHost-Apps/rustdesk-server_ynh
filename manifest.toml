@@ -63,7 +63,7 @@ ram.runtime = "50M"
     [resources.ports]
     main.default = 21115
     main.exposed = "TCP"
-    hbbs.main = 21116
+    hbbs.default = 21116
     hbbs.exposed = "Both"
-    hbbr.main = 21117
+    hbbr.default = 21117
     hbbr.exposed = "TCP"
