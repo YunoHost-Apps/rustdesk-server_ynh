@@ -7,11 +7,10 @@ User=__APP__
 Group=__APP__
 LimitNOFILE=1000000
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/hbbr
+ExecStart=__INSTALL_DIR__/hbbr -k _
 Restart=always
-#StandardOutput=append:__INSTALL_DIR__/hbbr.log
-#StandardError=append:__INSTALL_DIR__/hbbr.error
-# Restart service after 10 seconds if node service crashes
+StandardOutput=append:/var/log/rustdesk/relayserver.log
+StandardError=append:/var/log/rustdesk/relayserver.error
 RestartSec=10
 
 [Install]
