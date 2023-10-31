@@ -5,14 +5,12 @@ Description=RustDesk Signal Server
 Type=simple
 User=__APP__
 Group=__APP__
-
 LimitNOFILE=1000000
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/hbbs -k #-r 127.0.0.1:__PORT_HBBS__
+ExecStart=__INSTALL_DIR__/hbbs -r 127.0.0.1:__PORT_HBBS__
 Restart=always
 StandardOutput=append:/var/log/rustdesk/signalserver.log
 StandardError=append:/var/log/rustdesk/signalserver.error
-
 RestartSec=10
 
 [Install]
