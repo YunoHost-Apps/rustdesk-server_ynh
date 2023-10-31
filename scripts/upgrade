@@ -33,6 +33,8 @@ then
 fi
 
 chown -R $app:www-data "$install_dir"
+chmod +x "$install_dir/hbbr"
+chmod +x "$install_dir/hbbs"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
