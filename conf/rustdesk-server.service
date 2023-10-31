@@ -9,8 +9,8 @@ LimitNOFILE=1000000
 ExecStart=__INSTALL_DIR__/hbbr
 WorkingDirectory=__INSTALL_DIR__/
 Restart=always
-StandardOutput=append:rustdesk-server/hbbr.log
-StandardError=append:rustdesk-server/hbbr.error
+StandardOutput=append:__INSTALL_DIR__/hbbr.log
+StandardError=append:__INSTALL_DIR__/hbbr.error
 # Restart service after 10 seconds if node service crashes
 RestartSec=10
 
