@@ -18,7 +18,7 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 RustDesk est une alternative de contrôle à distance open source complète pour l'auto-hébergement et la sécurité avec une configuration minimale.
 
-**Version incluse :** 1.0~ynh1
+**Version incluse :** 1.1.8-2~ynh1
 
 ## Captures d’écran
 
