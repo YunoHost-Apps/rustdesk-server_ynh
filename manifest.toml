@@ -58,14 +58,16 @@ ram.runtime = "50M"
     [resources.permissions]
     main.url = "/"
 
+[resources.ports]
+
     [resources.ports]
-    main.default = 21115
-    main.exposed = "TCP"
-    hbbs.default = 21116
-    hbbs.exposed = "Both"
+    hbbs.default = 21115
+    hbbs.exposed = "TCP"
+    hbbsbis.default = 21116
+    hbbsbis.exposed = "Both"
+    hbbster.default = 21118
+    hbbster.exposed = "TCP"
     hbbr.default = 21117
     hbbr.exposed = "TCP"
-    mainbis.default = 21118
-    mainbis.exposed = "TCP"
-    mainter.default = 21119
-    mainter.exposed = "TCP"
+    hbbrbis.default = 21119
+    hbbrbis.exposed = "TCP"
