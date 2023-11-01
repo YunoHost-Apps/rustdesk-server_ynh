@@ -5,9 +5,9 @@ It shall NOT be edited by hand.
 
 # RustDesk Server pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/rustdesk.svg)](https://dash.yunohost.org/appci/app/rustdesk) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rustdesk.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rustdesk.maintain.svg)
+[![Niveau d’intégration](https://dash.yunohost.org/integration/rustdesk-server.svg)](https://dash.yunohost.org/appci/app/rustdesk-server) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.maintain.svg)
 
-[![Installer RustDesk Server avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rustdesk)
+[![Installer RustDesk Server avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rustdesk-server)
 
 *[Read this readme in english.](./README.md)*
 
@@ -29,19 +29,19 @@ Auto-hébergez votre propre serveur RustDesk. RustDesk est une alternative de co
 * Site officiel de l’app : <https://rustdesk.com/>
 * Documentation officielle de l’admin : <https://rustdesk.com/docs/en/>
 * Dépôt de code officiel de l’app : <https://github.com/rustdesk/rustdesk-server>
-* YunoHost Store: <https://apps.yunohost.org/app/rustdesk>
-* Signaler un bug : <https://github.com/YunoHost-Apps/rustdesk_ynh/issues>
+* YunoHost Store: <https://apps.yunohost.org/app/rustdesk-server>
+* Signaler un bug : <https://github.com/YunoHost-Apps/rustdesk-server_ynh/issues>
 
 ## Informations pour les développeurs
 
-Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/rustdesk_ynh/tree/testing).
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/rustdesk-server_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.
 
 ``` bash
-sudo yunohost app install https://github.com/YunoHost-Apps/rustdesk_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/rustdesk-server_ynh/tree/testing --debug
 ou
-sudo yunohost app upgrade rustdesk -u https://github.com/YunoHost-Apps/rustdesk_ynh/tree/testing --debug
+sudo yunohost app upgrade rustdesk-server -u https://github.com/YunoHost-Apps/rustdesk-server_ynh/tree/testing --debug
 ```
 
 **Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
