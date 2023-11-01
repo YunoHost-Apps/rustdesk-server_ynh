@@ -16,7 +16,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
+Self-host your own RustDesk server. RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
 
 **Shipped version:** 1.1.8-2~ynh1
 
