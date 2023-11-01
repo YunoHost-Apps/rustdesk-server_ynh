@@ -1,5 +1,5 @@
 [Unit]
-Description=Rustdesk Signal Server
+Description=RustDesk: Signal Server
 
 [Service]
 Type=simple
