@@ -2,8 +2,8 @@
 
 packaging_format = 2
 
-id = "rustdesk-server"
-name = "Rustdesk server"
+id = "rustdesk"
+name = "RustDesk"
 description.en = "Remote control alternative for self-hosting"
 description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
 
