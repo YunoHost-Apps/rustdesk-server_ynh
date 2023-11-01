@@ -56,6 +56,7 @@ ynh_systemd_action --service_name=rustdeskrelay --action="start" --log_path="sys
 ynh_systemd_action --service_name=rustdesksignal --action="start" --log_path="systemd"
 
 key=$(cat "$install_dir/id_ed25519.pub")
+ynh_app_setting_set --app=$app --key=key --value=$key
 
 #=================================================
 # END OF SCRIPT
