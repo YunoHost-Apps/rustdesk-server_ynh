@@ -52,10 +52,10 @@ ynh_use_logrotate
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=rustdeskrelay --action="start" --log_path="systemd" --timeout="20"
-ynh_systemd_action --service_name=rustdesksignal --action="start" --log_path="systemd" --timeout="20"
+ynh_systemd_action --service_name=rustdeskrelay --action="start" --log_path="systemd"
+ynh_systemd_action --service_name=rustdesksignal --action="start" --log_path="systemd"
 
-key=$(cat install_dir/id_ed25519.pub)
+key=$(cat $install_dir/id_ed25519.pub)
 
 #=================================================
 # END OF SCRIPT
