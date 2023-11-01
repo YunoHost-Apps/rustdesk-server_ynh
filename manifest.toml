@@ -3,7 +3,7 @@
 packaging_format = 2
 
 id = "rustdesk"
-name = "RustDesk"
+name = "RustDesk Server"
 description.en = "Remote control alternative for self-hosting"
 description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
 
@@ -59,16 +59,17 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.ports]
-    hbbs.default = 21115
-    hbbs.exposed = "TCP"
-    hbbsbis.default = 21116
-    hbbsbis.exposed = "Both"
+    api.default = 21114
+    hbbs-nat.default = 21115
+    hbbs-nat.exposed = "TCP"
+    hbbs.default = 21116
+    hbbs.exposed = "Both"
     hbbster.default = 21118
     hbbster.exposed = "TCP"
-    hbbr.default = 21117
-    hbbr.exposed = "TCP"
-    hbbrbis.default = 21119
-    hbbrbis.exposed = "TCP"
+    hbbr-tcp.default = 21117
+    hbbr-tcp.exposed = "TCP"
+    hbbr-websocket.default = 21119
+    hbbr-websocket.exposed = "TCP"
 
     [resources.apt]
     packages = "sqlite3"
