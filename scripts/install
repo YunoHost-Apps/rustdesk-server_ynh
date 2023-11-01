@@ -19,6 +19,7 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
 
+chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 chmod +x "$install_dir/hbbr"
 chmod +x "$install_dir/hbbs"
@@ -32,11 +33,24 @@ ynh_script_progression --message="Adding system configurations related to $app..
 ynh_add_nginx_config
 
 # Create a dedicated systemd config
-ynh_add_systemd_config --service=rustdesk-server --template=rustdesk-server.service
-ynh_add_systemd_config --service=rustdesk-hbbs --template=rustdesk-hbbs.service
+ynh_add_systemd_config --service=rustdeskrelay --template=rustdeskrelay.service
+ynh_add_systemd_config --service=rustdesksignal --template=rustdesksignal.service
 
-yunohost service add rustdesk-server --description="Remote control alternative for self-hosting" --log="/var/log/$app/$app.log"
-yunohost service add rustdesk-hbbs --description="Remote control alternative for self-hosting" --log="/var/log/$app/$app.log"
+yunohost service add rustdeskrelay --description="Rustdesk Relay Server" --log="/var/log/$app/$app.log"
+yunohost service add rustdesksignal --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log"
+
+#=================================================
+# HANDLE LOG FILES AND LOGROTATE
+#=================================================
+ynh_script_progression --message="Configuring log rotation..." --weight=1
+
+# Create log directory
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown $app -R /var/log/$app
+
+# Use logrotate to manage application logfile(s)
+ynh_use_logrotate
 
 #=================================================
 # APP INITIAL CONFIGURATION
@@ -58,8 +72,8 @@ yunohost service add rustdesk-hbbs --description="Remote control alternative for
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=rustdesk-server --action="start" --log_path="systemd"
-ynh_systemd_action --service_name=rustdesk-hbbs --action="start" --log_path="systemd"
+ynh_systemd_action --service_name=rustdeskrelay --action="start" --log_path="systemd"
+ynh_systemd_action --service_name=rustdesksignal --action="start" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT

@@ -17,7 +17,10 @@ ynh_script_progression --message="Restoring the app main directory..." --weight=
 
 ynh_restore_file --origin_path="$install_dir"
 
+chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
+chmod +x "$install_dir/hbbr"
+chmod +x "$install_dir/hbbs"
 
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
@@ -28,10 +31,23 @@ ynh_script_progression --message="Restoring system configurations related to $ap
 
 ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
-ynh_restore_file --origin_path="/etc/systemd/system/$app.service"
-systemctl enable $app.service --quiet
+# Create log directory
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown $app -R /var/log/$app
 
-yunohost service add $app --description="Remote control alternative for self-hosting" --log="/var/log/$app/$app.log"
+ynh_restore_file --origin_path="/etc/systemd/system/$rustdeskrelay.service"
+systemctl enable $rustdeskrelay.service --quiet
+
+ynh_restore_file --origin_path="/etc/systemd/system/$ --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log"
+.service"
+systemctl enable $ --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log"
+.service --quiet
+
+ynh_restore_file --origin_path="/etc/logrotate.d/$app"
+
+yunohost service add rustdeskrelay --description="Rustdesk Relay Server" --log="/var/log/$app/$app.log"
+yunohost service add rustdesksignal --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log"
 
 #=================================================
 # GENERIC FINALIZATION
@@ -40,8 +56,9 @@ yunohost service add $app --description="Remote control alternative for self-hos
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server and $app's service..." --weight=1
 
-# Typically you only have either $app or php-fpm but not both at the same time...
-ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
+# Typically you only have either $app but not both at the same time...
+ynh_systemd_action --service_name=rustdeskrelay --action="start" --log_path="systemd"
+ynh_systemd_action --service_name=rustdesksignal --action="start" --log_path="systemd"
 
 ynh_systemd_action --service_name=nginx --action=reload
 
