@@ -43,26 +43,12 @@ chmod +x "$install_dir/hbbs"
 #=================================================
 ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
 
-ynh_add_nginx_config
-
 # Create a dedicated systemd config
 ynh_add_systemd_config --service=rustdeskrelay --template=rustdeskrelay.service
 ynh_add_systemd_config --service=rustdesksignal --template=rustdesksignal.service
 
 yunohost service add rustdeskrelay --description="Rustdesk Relay Server" --log="/var/log/$app/$app.log"
 yunohost service add rustdesksignal --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log"
-
-#=================================================
-# RECONFIGURE THE APP (UPDATE CONF, APPLY MIGRATIONS...)
-#=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-#ynh_script_progression --message="Updating a configuration file..." --weight=1
-
-#ynh_add_config --template="some_config_file" --destination="$install_dir/some_config_file"
-
-#chmod 400 "$install_dir/some_config_file"
-#chown $app:$app "$install_dir/some_config_file"
 
 #=================================================
 # START SYSTEMD SERVICE

@@ -3,7 +3,7 @@
 packaging_format = 2
 
 id = "rustdesk-server"
-name = "Rustdesk server"
+name = "RustDesk Server"
 description.en = "Remote control alternative for self-hosting"
 description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
 
@@ -22,9 +22,9 @@ yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = false
 
-ldap = false
+ldap = "not_relevant"
 
-sso = false
+sso = "not_relevant"
 
 disk = "50M"
 ram.build = "50M"
@@ -59,6 +59,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.ports]
+    api.default = 21114
     hbbs.default = 21115
     hbbs.exposed = "TCP"
     hbbsbis.default = 21116
@@ -69,3 +70,6 @@ ram.runtime = "50M"
     hbbr.exposed = "TCP"
     hbbrbis.default = 21119
     hbbrbis.exposed = "TCP"
+
+    [resources.apt]
+    packages = "sqlite3"
