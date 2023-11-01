@@ -65,3 +65,7 @@ ram.runtime = "50M"
     hbbs.exposed = "Both"
     hbbr.default = 21117
     hbbr.exposed = "TCP"
+    mainbis.default = 21118
+    mainbis.exposed = "TCP"
+    mainter.default = 21119
+    mainter.exposed = "TCP"
