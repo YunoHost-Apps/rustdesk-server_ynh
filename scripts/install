@@ -38,6 +38,18 @@ ynh_add_systemd_config --service=rustdesk-hbbs --template=rustdesk-hbbs.service
 yunohost service add rustdesk-server --description="Remote control alternative for self-hosting" --log="/var/log/$app/$app.log"
 yunohost service add rustdesk-hbbs --description="Remote control alternative for self-hosting" --log="/var/log/$app/$app.log"
 
+# HANDLE LOG FILES AND LOGROTATE
+#=================================================
+ynh_script_progression --message="Configuring log rotation..." --weight=1
+
+# Create log directory
+mkdir -p /var/log/$app
+touch /var/log/$app/$app.log
+chown $app -R /var/log/$app
+
+# Use logrotate to manage application logfile(s)
+ynh_use_logrotate
+
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
