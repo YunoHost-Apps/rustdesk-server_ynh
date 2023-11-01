@@ -69,3 +69,6 @@ ram.runtime = "50M"
     hbbr.exposed = "TCP"
     hbbrbis.default = 21119
     hbbrbis.exposed = "TCP"
+
+    [resources.apt]
+    packages = "sqlite3"
