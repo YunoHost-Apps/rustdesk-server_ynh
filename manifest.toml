@@ -7,14 +7,14 @@ name = "Rustdesk server"
 description.en = "Remote control alternative for self-hosting"
 description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
 
-version = "1.0~ynh1"
+version = "1.1.8-2~ynh1"
 
 maintainers = ["eric_G"]
 
 [upstream]
 license = "AGPL-3.0"
 website = "https://rustdesk.com/"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://rustdesk.com/docs/en/"
 code = "https://github.com/rustdesk/rustdesk-server"
 
 [integration]
@@ -43,8 +43,6 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        in_subdir = true
-        extract = false
         amd64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-amd64.zip"
         amd64.sha256 = "3cf2790c3e9ef70c0eb9ffae02cbe3a2efad71621efda376450e7be3209f2b1c"
         arm64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-arm64v8.zip"
@@ -63,7 +61,7 @@ ram.runtime = "50M"
     [resources.ports]
     main.default = 21115
     main.exposed = "TCP"
-    hbbs.main = 21116
+    hbbs.default = 21116
     hbbs.exposed = "Both"
-    hbbr.main = 21117
+    hbbr.default = 21117
     hbbr.exposed = "TCP"

@@ -20,8 +20,8 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 ynh_setup_source --dest_dir="$install_dir"
 
 chown -R $app:www-data "$install_dir"
-#chmod +x "$install_dir/hbbr"
-#chmod +x "$install_dir/hbbs"
+chmod +x "$install_dir/hbbr"
+chmod +x "$install_dir/hbbs"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -35,8 +35,8 @@ ynh_add_nginx_config
 ynh_add_systemd_config --service=rustdesk-server --template=rustdesk-server.service
 ynh_add_systemd_config --service=rustdesk-hbbs --template=rustdesk-hbbs.service
 
-yunohost service add rustdesk-server --description="A short description of the app" --log="/var/log/$app/$app.log"
-yunohost service add rustdesk-hbbs --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add rustdesk-server --description="Remote control alternative for self-hosting" --log="/var/log/$app/$app.log"
+yunohost service add rustdesk-hbbs --description="Remote control alternative for self-hosting" --log="/var/log/$app/$app.log"
 
 #=================================================
 # APP INITIAL CONFIGURATION
@@ -58,8 +58,8 @@ yunohost service add rustdesk-hbbs --description="A short description of the app
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=rustdesk-server --action="start" --log_path="/var/log/$app/$app.log"
-ynh_systemd_action --service_name=rustdesk-hbbs --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=rustdesk-server --action="start" --log_path="systemd"
+ynh_systemd_action --service_name=rustdesk-hbbs --action="start" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT

@@ -8,9 +8,9 @@ Group=__APP__
 Restart=always
 LimitNOFILE=1000000
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/hbbs -r 127.0.0.1:__PORT_HBBS__
-StandardOutput=append:__INSTALL_DIR__/hbbs.log
-StandardError=append:__INSTALL_DIR__/hbbs.error
+ExecStart=__INSTALL_DIR__/hbbs -r 127.0.0.1 -p __PORT_HBBS__
+#StandardOutput=append:__INSTALL_DIR__/hbbs.log
+#StandardError=append:__INSTALL_DIR__/hbbs.error
 # Restart service after 10 seconds if node service crashes
 RestartSec=10
 
