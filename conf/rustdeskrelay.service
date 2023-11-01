@@ -1,5 +1,5 @@
 [Unit]
-Description=Rustdesk Relay Server
+Description=RustDesk: Relay Server
 
 [Service]
 Type=simple

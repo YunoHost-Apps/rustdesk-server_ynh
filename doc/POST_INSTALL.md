@@ -1,4 +1,4 @@
-Credentials to use in Settings -> Network
+Credentials to use in RustDesk client Settings -> Network
 
 ID Server: __DOMAIN__
 Relay Server: __DOMAIN__
