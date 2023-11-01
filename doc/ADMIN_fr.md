@@ -1,4 +1,4 @@
-Informations d'identification à utiliser dans Paramètres -> Réseau
+Informations d'identification à utiliser dans le client RustDesk sous Paramètres -> Réseau
 
 Serveur ID : __DOMAIN__
 Serveur relais : __DOMAIN__
