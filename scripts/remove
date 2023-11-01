@@ -31,7 +31,7 @@ fi
 ynh_remove_systemd_config --service=rustdeskrelay
 ynh_remove_systemd_config --service=rustdesksignal
 
-ynh_remove_nginx_config
+#ynh_remove_nginx_config
 
 # Remove the app-specific logrotate config
 ynh_remove_logrotate

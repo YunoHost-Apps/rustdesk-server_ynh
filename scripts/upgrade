@@ -43,7 +43,7 @@ chmod +x "$install_dir/hbbs"
 #=================================================
 ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
 
-ynh_add_nginx_config
+#ynh_add_nginx_config
 
 # Create a dedicated systemd config
 ynh_add_systemd_config --service=rustdeskrelay --template=rustdeskrelay.service
