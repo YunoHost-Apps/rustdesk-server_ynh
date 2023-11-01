@@ -31,8 +31,8 @@ ynh_backup --src_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 # BACKUP SYSTEMD
 #=================================================
 
-ynh_backup --src_path="/etc/systemd/system/rustdesk-server.service"
-ynh_backup --src_path="/etc/systemd/system/rustdesk-hbbs.service"
+ynh_backup --src_path="/etc/systemd/system/rustdeskrelay.service"
+ynh_backup --src_path="/etc/systemd/system/rustdesksignal.service"
 
 #=================================================
 # END OF SCRIPT
