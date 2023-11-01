@@ -59,6 +59,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.ports]
+    api.default = 21114
     hbbs.default = 21115
     hbbs.exposed = "TCP"
     hbbsbis.default = 21116
