@@ -2,7 +2,7 @@
 
 packaging_format = 2
 
-id = "rustdesk"
+id = "rustdesk-server"
 name = "RustDesk Server"
 description.en = "Remote control alternative for self-hosting"
 description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
@@ -34,10 +34,6 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
-    [install.init_main_permission]
-    type = "group"
-    default = "visitors"
-
 [resources]
 
     [resources.sources]
@@ -57,6 +53,8 @@ ram.runtime = "50M"
 
     [resources.permissions]
     main.url = "/"
+    main.show_tile = false
+    main.allowed = "visitors"
 
     [resources.ports]
     api.default = 21114
