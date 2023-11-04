@@ -47,9 +47,9 @@ ram.runtime = "50M"
         armhf.sha256 = "2e6df5751ca0188190c08f6b67125820e7f015545787fae34c1a661c963f0c4b"
 
         autoupdate.strategy = "latest_github_release"
-        autoupdate.asset.arm64 = "rustdesk-server-linux-arm64v8.zip"
-        autoupdate.asset.amd64 = "rustdesk-server-linux-amd64.zip"
-        autoupdate.asset.armhf = "rustdesk-server-linux-armv7.zip"
+        autoupdate.asset.arm64 = "rustdesk-server-linux-arm64v8\\.zip"
+        autoupdate.asset.amd64 = "rustdesk-server-linux-amd64\\.zip"
+        autoupdate.asset.armhf = "rustdesk-server-linux-armv7\\.zip"
 
     [resources.system_user]
 
