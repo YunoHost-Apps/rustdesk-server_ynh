@@ -39,12 +39,12 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        amd64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-amd64.zip"
-        amd64.sha256 = "3cf2790c3e9ef70c0eb9ffae02cbe3a2efad71621efda376450e7be3209f2b1c"
-        arm64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-arm64v8.zip"
-        arm64.sha256 = "cdab02fb8731f05ab34340b91ba8cc8333ea8e4445bda1d53ee2d4a6dbb98c7c"
-        armhf.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8-2/rustdesk-server-linux-armv7.zip"
-        armhf.sha256 = "2e6df5751ca0188190c08f6b67125820e7f015545787fae34c1a661c963f0c4b"
+        amd64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8/rustdesk-server-linux-amd64.zip"
+        amd64.sha256 = "7f17ff1c3118cf8336468345410bd4d7404de2833cb11cdbef0bdb27b55c60e9"
+        arm64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8/rustdesk-server-linux-arm64v8.zip"
+        arm64.sha256 = "f91f3416f93d574280013a71d0d8c57d2b489c861b1754ea247b251e38301e07"
+        armhf.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.8/rustdesk-server-linux-armv7.zip"
+        armhf.sha256 = "7e50dd032185f8d05f26b022bf26e4f4f6e80d3239aafc4106b2328bc8671e24"
 
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset.arm64 = "rustdesk-server-linux-arm64v8\\.zip"
