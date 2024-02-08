@@ -9,7 +9,7 @@ description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
 
 version = "1.1.9~ynh1"
 
-maintainers = ["eric_G"]
+maintainers = [ "eric_G" ]
 
 [upstream]
 license = "AGPL-3.0"
@@ -41,37 +41,40 @@ ram.runtime = "50M"
         [resources.sources.main]
         amd64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.9/rustdesk-server-linux-amd64.zip"
         amd64.sha256 = "c6db9a6bb81cb0ec5503e7bab6ac51a4c1135dcd6b1493ff0630dfce4fce29d1"
+        i386.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.9/rustdesk-server-linux-i386.zip"
+        i386.sha256 = "2e961e46676200f998442ad3a1a112b25a5383246a8c376bfc28188a1c94df27"
         arm64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.9/rustdesk-server-linux-arm64v8.zip"
         arm64.sha256 = "30095ba2c1f9f7b783b442f7792630faa16e1645512270486db6fd9cce4e1368"
         armhf.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.9/rustdesk-server-linux-armv7.zip"
         armhf.sha256 = "4a3c7d1a17a2b5e1141c9bb4b2f64a17fb121c7d73fe075574ab77c9e7fab0d1"
 
         autoupdate.strategy = "latest_github_release"
-        autoupdate.asset.arm64 = "rustdesk-server-linux-arm64v8\\.zip"
-        autoupdate.asset.amd64 = "rustdesk-server-linux-amd64\\.zip"
-        autoupdate.asset.armhf = "rustdesk-server-linux-armv7\\.zip"
+        autoupdate.asset.amd64 = "rustdesk-server-linux-amd64.zip"
+        autoupdate.asset.i386 = "rustdesk-server-linux-i386.zip"
+        autoupdate.asset.arm64 = "rustdesk-server-linux-arm64v8.zip"
+        autoupdate.asset.armhf = "rustdesk-server-linux-armv7.zip"
 
-    [resources.system_user]
+[resources.system_user]
 
-    [resources.install_dir]
+[resources.install_dir]
 
-    [resources.permissions]
-    main.url = "/"
-    main.show_tile = false
-    main.allowed = "visitors"
+[resources.permissions]
+main.url = "/"
+main.show_tile = false
+main.allowed = "visitors"
 
-    [resources.ports]
-    api.default = 21114
-    hbbs.default = 21115
-    hbbs.exposed = "TCP"
-    hbbsbis.default = 21116
-    hbbsbis.exposed = "Both"
-    hbbster.default = 21118
-    hbbster.exposed = "TCP"
-    hbbr.default = 21117
-    hbbr.exposed = "TCP"
-    hbbrbis.default = 21119
-    hbbrbis.exposed = "TCP"
+[resources.ports]
+api.default = 21114
+hbbs.default = 21115
+hbbs.exposed = "TCP"
+hbbsbis.default = 21116
+hbbsbis.exposed = "Both"
+hbbster.default = 21118
+hbbster.exposed = "TCP"
+hbbr.default = 21117
+hbbr.exposed = "TCP"
+hbbrbis.default = 21119
+hbbrbis.exposed = "TCP"
 
-    [resources.apt]
-    packages = "sqlite3"
+[resources.apt]
+packages = "sqlite3"
