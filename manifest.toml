@@ -7,7 +7,7 @@ name = "RustDesk Server"
 description.en = "Remote control alternative for self-hosting"
 description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
 
-version = "1.1.9~ynh1"
+version = "1.1.9~ynh2"
 
 maintainers = [ "eric_G" ]
 
