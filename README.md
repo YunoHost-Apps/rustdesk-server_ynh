@@ -9,7 +9,7 @@ It shall NOT be edited by hand.
 
 [![Install RustDesk Server with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rustdesk-server)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
 > *This package allows you to install RustDesk Server quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 Self-host your own RustDesk server. RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
 
-**Shipped version:** 1.1.10.3~ynh1
+**Shipped version:** 1.1.11-1~ynh1
 
 ## Screenshots
 
