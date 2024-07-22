@@ -5,7 +5,7 @@
 
 # YunoHost 上的 RustDesk Server
 
-[![集成程度](https://dash.yunohost.org/integration/rustdesk-server.svg)](https://dash.yunohost.org/appci/app/rustdesk-server) ![工作状态](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/rustdesk-server.svg)](https://ci-apps.yunohost.org/ci/apps/rustdesk-server/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.maintain.svg)
 
 [![使用 YunoHost 安装 RustDesk Server](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rustdesk-server)
 
@@ -18,7 +18,7 @@
 
 Self-host your own RustDesk server. RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
 
-**分发版本：** 1.1.11-1~ynh1
+**分发版本：** 1.1.11-1~ynh2
 
 ## 截图
 
