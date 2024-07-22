@@ -5,7 +5,7 @@ Il NE doit PAS être modifié à la main.
 
 # RustDesk Server pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/rustdesk-server.svg)](https://dash.yunohost.org/appci/app/rustdesk-server) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.maintain.svg)
+[![Niveau d’intégration](https://dash.yunohost.org/integration/rustdesk-server.svg)](https://ci-apps.yunohost.org/ci/apps/rustdesk-server/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.maintain.svg)
 
 [![Installer RustDesk Server avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rustdesk-server)
 
@@ -18,7 +18,7 @@ Il NE doit PAS être modifié à la main.
 
 Auto-hébergez votre propre serveur RustDesk. RustDesk est une alternative de contrôle à distance open source complète pour l'auto-hébergement et la sécurité avec une configuration minimale.
 
-**Version incluse :** 1.1.11-1~ynh1
+**Version incluse :** 1.1.11-1~ynh2
 
 ## Captures d’écran
 
