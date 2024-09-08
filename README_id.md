@@ -28,7 +28,7 @@ Self-host your own RustDesk server. RustDesk is a full-featured open source remo
 
 - Website aplikasi resmi: <https://rustdesk.com/>
 - Dokumentasi admin resmi: <https://rustdesk.com/docs/en/>
-- Repositori kode aplikasi hulu: <https://github.com/rustdesk/rustdesk-server>
+- Depot kode aplikasi hulu: <https://github.com/rustdesk/rustdesk-server>
 - Gudang YunoHost: <https://apps.yunohost.org/app/rustdesk-server>
 - Laporkan bug: <https://github.com/YunoHost-Apps/rustdesk-server_ynh/issues>
 
