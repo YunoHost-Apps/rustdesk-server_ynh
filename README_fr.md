@@ -18,7 +18,7 @@ Il NE doit PAS être modifié à la main.
 
 Auto-hébergez votre propre serveur RustDesk. RustDesk est une alternative de contrôle à distance open source complète pour l'auto-hébergement et la sécurité avec une configuration minimale.
 
-**Version incluse :** 1.1.11-1~ynh2
+**Version incluse :** 1.1.11-1~ynh3
 
 ## Captures d’écran
 
