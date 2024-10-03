@@ -8,14 +8,10 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Removing system configurations related to $app..."
 
-if ynh_hide_warnings yunohost service status rustdeskrelay >/dev/null
-then
-	ynh_script_progression "Removing rustdeskrelay service integration..."
+if ynh_hide_warnings yunohost service status rustdeskrelay >/dev/null; then
 	yunohost service remove rustdeskrelay
 fi
-if ynh_hide_warnings yunohost service status rustdesksignal >/dev/null
-then
-	ynh_script_progression "Removing rustdesksignal service integration..."
+if ynh_hide_warnings yunohost service status rustdesksignal >/dev/null; then
 	yunohost service remove rustdesksignal
 fi
 

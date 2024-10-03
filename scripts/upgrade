@@ -18,8 +18,6 @@ ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir" --keep="id_ed25519.pub id_ed25519"
 
-#chmod -R o-rwx "$install_dir"
-#chown -R $app:www-data "$install_dir"
 chmod +x "$install_dir/hbbr"
 chmod +x "$install_dir/hbbs"
 

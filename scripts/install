@@ -10,8 +10,6 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-#chmod -R o-rwx "$install_dir"
-#chown -R $app:www-data "$install_dir"
 chmod +x "$install_dir/hbbr"
 chmod +x "$install_dir/hbbs"
 
@@ -28,7 +26,6 @@ yunohost service add rustdesksignal --description="Rustdesk Signal Server" --log
 
 mkdir -p /var/log/$app
 touch /var/log/$app/$app.log
-#chown $app -R /var/log/$app
 
 ynh_config_add_logrotate
 
