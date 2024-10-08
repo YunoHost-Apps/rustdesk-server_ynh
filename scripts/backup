@@ -12,14 +12,10 @@ ynh_print_info "Declaring files to be backed up..."
 ynh_backup "$install_dir"
 
 #=================================================
-# BACKUP LOGROTATE
+# SYSTEM CONFIGURATION
 #=================================================
 
 ynh_backup "/etc/logrotate.d/$app"
-
-#=================================================
-# BACKUP SYSTEMD
-#=================================================
 
 ynh_backup "/etc/systemd/system/rustdeskrelay.service"
 ynh_backup "/etc/systemd/system/rustdesksignal.service"
