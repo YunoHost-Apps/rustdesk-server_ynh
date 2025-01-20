@@ -7,7 +7,7 @@ name = "RustDesk Server"
 description.en = "Remote control alternative for self-hosting"
 description.fr = "Alternative de contrôle à distance pour l'auto-hébergement"
 
-version = "1.1.12~ynh1"
+version = "1.1.13~ynh1"
 
 maintainers = []
 
@@ -39,14 +39,14 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        amd64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.12/rustdesk-server-linux-amd64.zip"
-        amd64.sha256 = "875e4f7242a2a74b6b6e287dfa4c66fdb7861a80fba3161440f53e390463979c"
-        i386.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.12/rustdesk-server-linux-i386.zip"
-        i386.sha256 = "48dfadb47bcd3f6e136d9d9d8d0825e8cde4a54f0d1866c44fd057b99ed880da"
-        arm64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.12/rustdesk-server-linux-arm64v8.zip"
-        arm64.sha256 = "249b88047dbb53e06cb10d7cd6a1bf688622ac5c7583dc513b8d8ad51b66e077"
-        armhf.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.12/rustdesk-server-linux-armv7.zip"
-        armhf.sha256 = "92eaa213d969b71b171fe456881a514afeae811e3b96a46045a6dd0c7e61df3f"
+        amd64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.13/rustdesk-server-linux-amd64.zip"
+        amd64.sha256 = "37ac0361ac8318e46c126ff7c72336b3140f8dbad6b242bdf2f68e853b152d6b"
+        i386.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.13/rustdesk-server-linux-i386.zip"
+        i386.sha256 = "fd01ee9351884afbea17fa5032159d01c1d3b45df32a341657de0aeb98fdc57f"
+        arm64.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.13/rustdesk-server-linux-arm64v8.zip"
+        arm64.sha256 = "d420b4c378f6744480048f2c6ff2c28574ebe01e0a2add8ff38724bcd244c585"
+        armhf.url = "https://github.com/rustdesk/rustdesk-server/releases/download/1.1.13/rustdesk-server-linux-armv7.zip"
+        armhf.sha256 = "33589c5934a6db4d26abb3484d7e25094416b5687f98ae3335e9f12e132455cb"
 
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset.amd64 = "rustdesk-server-linux-amd64.zip"
