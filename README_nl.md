@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # RustDesk Server voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/rustdesk-server.svg)](https://ci-apps.yunohost.org/ci/apps/rustdesk-server/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/rustdesk-server.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/rustdesk-server)](https://ci-apps.yunohost.org/ci/apps/rustdesk-server/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/rustdesk-server)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/rustdesk-server)
 
 [![RustDesk Server met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rustdesk-server)
 
@@ -18,7 +20,7 @@ Hij mag NIET handmatig aangepast worden.
 
 Self-host your own RustDesk server. RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
 
-**Geleverde versie:** 1.1.12~ynh1
+**Geleverde versie:** 1.1.13~ynh1
 
 ## Schermafdrukken
 
