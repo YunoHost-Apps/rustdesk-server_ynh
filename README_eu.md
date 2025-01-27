@@ -20,7 +20,7 @@ EZ editatu eskuz.
 
 Self-host your own RustDesk server. RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration.
 
-**Paketatutako bertsioa:** 1.1.13~ynh1
+**Paketatutako bertsioa:** 1.1.14~ynh1
 
 ## Pantaila-argazkiak
 
