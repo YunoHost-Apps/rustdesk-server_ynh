@@ -15,8 +15,8 @@ if ynh_hide_warnings yunohost service status rustdesksignal >/dev/null; then
 	yunohost service remove rustdesksignal
 fi
 
-ynh_config_remove_systemdrustdeskrelay
-ynh_config_remove_systemdrustdesksignal
+ynh_config_remove_systemd rustdeskrelay
+ynh_config_remove_systemd rustdesksignal
 
 ynh_config_remove_logrotate
 
