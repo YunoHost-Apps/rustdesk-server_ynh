@@ -29,8 +29,11 @@ touch /var/log/$app/$app.log
 
 ynh_restore "/etc/logrotate.d/$app"
 
-yunohost service add rustdeskrelay --description="Rustdesk Relay Server" --log="/var/log/$app/$app.log"
-yunohost service add rustdesksignal --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log"
+# According to the doc (no web client for now) https://rustdesk.com/docs/en/self-host/rustdesk-server-oss/install/#ports
+# TCP: 21115 21116 21117
+# UDP: 21116
+yunohost service add rustdeskrelay --description="Rustdesk Relay Server" --log="/var/log/$app/$app.log" --needs_exposed_ports 21117
+yunohost service add rustdesksignal --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log" --needs_exposed_ports 21115 21116
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
