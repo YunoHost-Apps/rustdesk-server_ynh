@@ -64,17 +64,22 @@ main.show_tile = false
 main.allowed = "visitors"
 
 [resources.ports]
-api.default = 21114
+#api.default = 21114
 hbbs.default = 21115
 hbbs.exposed = "TCP"
+hbbs.fixed = true
 hbbsbis.default = 21116
 hbbsbis.exposed = "Both"
+hbbsbis.fixed = true
 hbbster.default = 21118
 hbbster.exposed = "TCP"
+hbbster.fixed = true
 hbbr.default = 21117
 hbbr.exposed = "TCP"
+hbbr.fixed = true
 hbbrbis.default = 21119
 hbbrbis.exposed = "TCP"
+hbbrbis.fixed = true
 
 [resources.apt]
 packages = "sqlite3"
