@@ -3,6 +3,24 @@
 source /usr/share/yunohost/helpers
 
 #=================================================
+# MIGRATIONS
+#=================================================
+
+# Older versions required a domain and claimed its root path, blocking other
+# web apps on it. Keep that domain as the public address, then free it.
+if [ -z "${server_host:-}" ]; then
+    server_host="${domain:-$(cat /etc/yunohost/current_host)}"
+    ynh_app_setting_set --key=server_host --value="$server_host"
+fi
+
+if [ -n "${domain:-}" ] || [ -n "${path:-}" ]; then
+    ynh_script_progression "Releasing the domain previously reserved by $app..."
+    ynh_permission_url --permission="main" --clear_urls
+    ynh_app_setting_delete --key=domain
+    ynh_app_setting_delete --key=path
+fi
+
+#=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."

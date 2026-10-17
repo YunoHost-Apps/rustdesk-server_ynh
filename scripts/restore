@@ -35,14 +35,12 @@ yunohost service add rustdeskrelay --description="Rustdesk Relay Server" --log="
 yunohost service add rustdesksignal --description="Rustdesk Signal Server" --log="/var/log/$app/$app.log" --needs_exposed_ports 21115 21116
 
 #=================================================
-# RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
+# START SYSTEMD SERVICES
 #=================================================
-ynh_script_progression "Reloading NGINX web server and $app's service..."
+ynh_script_progression "Starting $app's systemd services..."
 
 ynh_systemctl --service=rustdeskrelay --action="start" --log_path="systemd"
 ynh_systemctl --service=rustdesksignal --action="start" --log_path="systemd"
-
-ynh_systemctl --service=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

@@ -7,6 +7,11 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
+if [ -z "${server_host:-}" ]; then
+    server_host=$(cat /etc/yunohost/current_host)
+fi
+ynh_app_setting_set --key=server_host --value="$server_host"
+
 ynh_setup_source --dest_dir="$install_dir"
 
 chmod +x "$install_dir/hbbr"
